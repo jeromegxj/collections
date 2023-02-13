@@ -140,6 +140,13 @@ abstract class BaseArrayCollectionTest extends TestCase
         self::assertSame(current($elements), $collection->current());
     }
 
+    public function testCurrentNull(): void
+    {
+        $collection = $this->buildCollection([]);
+
+        self::assertNull($collection->current());
+    }
+
     /**
      * @param array<string|int, string|int> $elements
      *

@@ -144,7 +144,13 @@ class ArrayCollection implements Collection, Selectable, Stringable
      */
     public function current()
     {
-        return current($this->elements);
+        $element = current($this->elements);
+
+        if ($element === false) {
+            return null;
+        }
+
+        return $element;
     }
 
     /**

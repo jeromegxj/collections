@@ -112,7 +112,7 @@ interface ReadableCollection extends Countable, IteratorAggregate
      * Gets the element of the collection at the current iterator position.
      *
      * @return mixed
-     * @psalm-return T|false
+     * @psalm-return T|null
      */
     public function current();
 
