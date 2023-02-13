@@ -136,7 +136,13 @@ class ArrayCollection implements Collection, Selectable, Stringable
      */
     public function next()
     {
-        return next($this->elements);
+        $element = next($this->elements);
+
+        if ($element === false) {
+            return null;
+        }
+
+        return $element;
     }
 
     /**

@@ -120,7 +120,7 @@ interface ReadableCollection extends Countable, IteratorAggregate
      * Moves the internal iterator position to the next element and returns this element.
      *
      * @return mixed
-     * @psalm-return T|false
+     * @psalm-return T|null
      */
     public function next();
 

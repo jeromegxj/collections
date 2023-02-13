@@ -120,7 +120,13 @@ abstract class BaseArrayCollectionTest extends TestCase
             self::assertSame(current($elements), $collection->current(), 'Current values not match');
         }
 
-        self::assertFalse($collection->next());
+        self::assertNull($collection->next());
+    }
+
+    public function testNextNull(): void
+    {
+        $collection = $this->buildCollection([]);
+        self::assertNull($collection->next());
     }
 
     /**
