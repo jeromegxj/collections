@@ -114,7 +114,13 @@ class ArrayCollection implements Collection, Selectable, Stringable
      */
     public function last()
     {
-        return end($this->elements);
+        $element = end($this->elements);
+
+        if ($element === false) {
+            return null;
+        }
+
+        return $element;
     }
 
     /**

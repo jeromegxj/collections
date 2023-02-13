@@ -96,7 +96,7 @@ interface ReadableCollection extends Countable, IteratorAggregate
      * Sets the internal iterator to the last element in the collection and returns this element.
      *
      * @return mixed
-     * @psalm-return T|false
+     * @psalm-return T|null
      */
     public function last();
 

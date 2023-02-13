@@ -74,6 +74,12 @@ abstract class BaseArrayCollectionTest extends TestCase
         self::assertSame(end($elements), $collection->last());
     }
 
+    public function testLastNull(): void
+    {
+        $collection = $this->buildCollection([]);
+        self::assertNull($collection->last());
+    }
+
     /**
      * @param array<string|int, string|int> $elements
      *
