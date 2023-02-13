@@ -80,7 +80,13 @@ class ArrayCollection implements Collection, Selectable, Stringable
      */
     public function first()
     {
-        return reset($this->elements);
+        $element = reset($this->elements);
+
+        if ($element === false) {
+            return null;
+        }
+
+        return $element;
     }
 
     /**
